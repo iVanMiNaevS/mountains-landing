@@ -1,0 +1,295 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+:root {
+	--headerH: 80px;
+	--textColorDark: black;
+	--textColorWhite: white;
+}
+
+body {
+	background-size: cover;
+	background-image: url(./img/beautiful-shot-mountains-with-clear-sky-background.jpg);
+}
+
+.container {
+	max-width: 1600px;
+	padding: 0px 30px;
+}
+header {
+	z-index: 5;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 40px;
+	width: 100vw;
+	height: var(--headerH);
+	background: rgba(193, 193, 193, 0.768);
+	backdrop-filter: blur(8px);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+header img {
+	height: var(--headerH);
+}
+header span.profile {
+	position: relative;
+	margin-right: 20px;
+}
+header span.profile img {
+	position: absolute;
+	height: 30px;
+	right: -35%;
+	top: -10px;
+}
+header nav {
+	display: flex;
+	gap: 15px;
+}
+header nav span {
+	display: block;
+	font-size: 20px;
+	letter-spacing: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 2px;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 2px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+header span:hover {
+	padding-bottom: 2px;
+	border-bottom: 2px solid black;
+	color: white;
+}
+/* .bg1 {
+	width: 100%;
+	background-size: cover;
+	background-image: url(./img/beautiful-shot-mountains-with-clear-sky-background.jpg);
+} */
+.first-sec {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.first-sec h1 {
+	text-align: center;
+	color: var(--textColorWhite);
+	font-size: 60px;
+	font-weight: 700;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+.first-sec__content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-top: 40px;
+	align-items: center;
+}
+.first-sec__content button {
+	padding: 20px 30px;
+	background: #00000083;
+	backdrop-filter: blur(8px);
+	border-radius: 5px;
+	border: none;
+	color: var(--textColorWhite);
+	text-transform: uppercase;
+	width: fit-content;
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.first-sec__content button:hover {
+	background: #ffffff82;
+	backdrop-filter: blur(8px);
+	color: var(--textColorDark);
+}
+.first-sec__content p {
+	text-align: center;
+	font-size: 20px;
+	color: var(--textColorWhite);
+}
+.second-sec {
+	padding: 80px 0px;
+	background: #3333335c;
+	backdrop-filter: blur(3px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-wrapp {
+	border-radius: 10px;
+	display: flex;
+	border-radius: 10px;
+	padding: 20px;
+	gap: 15px;
+	width: 70vw;
+	background: #0000005d;
+}
+.form-wrapp form {
+	flex: 1 0 60%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: var(--textColorWhite);
+}
+.form-wrapp form h3 {
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 4px;
+}
+.form-wrapp__img {
+	border-radius: 10px;
+	flex: 1 0 40%;
+	background-size: cover;
+	background-image: url(./img/загруженное.jpg);
+	background-position: center;
+}
+.form__inputs {
+	display: flex;
+	gap: 20px;
+}
+.form-wrapp form input {
+	width: 100%;
+	border-radius: 5px;
+	background: white;
+	outline: none;
+	font-size: 20px;
+	padding: 5px 15px;
+}
+.form-wrapp form button {
+	padding: 20px 30px;
+	background: #ffffffbf;
+
+	backdrop-filter: blur(8px);
+	border-radius: 5px;
+	border: none;
+	color: var(--textColorDark);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.form-wrapp .input-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.form-wrapp form button:hover {
+	background: white;
+}
+.news-sec {
+	position: relative;
+	margin-top: 170px;
+}
+.news-sec h3 {
+	position: relative;
+	border-radius: 10px;
+	padding: 30px 50px 50px 50px;
+	color: var(--textColorDark);
+	font-weight: 600;
+	font-size: 35px;
+	letter-spacing: 15px;
+	background: white;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	width: 70%;
+	text-align: center;
+}
+.news-sec h3::after {
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: absolute;
+	display: block;
+	content: "";
+	background-image: url(./img/mountain-logo.png);
+	background-size: cover;
+	width: 150px;
+	height: 150px;
+}
+.news__list {
+	padding-top: 40px;
+	position: relative;
+	z-index: 1;
+	background: #3333335c;
+	backdrop-filter: blur(3px);
+}
+.news {
+}
+.news__text {
+}
+.news__button {
+}
+
+footer {
+	padding: 50px 0px;
+	margin-top: 160px;
+	position: relative;
+	height: 300px;
+	background: white;
+	color: var(--textColorDark);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+footer .circle {
+	left: 50%;
+	top: -20%;
+	transform: translate(-50%);
+	position: absolute;
+	z-index: 5;
+	border-radius: 100%;
+	background: white;
+}
+footer nav {
+	font-size: 20px;
+	display: flex;
+	gap: 200px;
+	justify-content: center;
+}
+footer p {
+	text-align: center;
+	font-size: 40px;
+}
+footer nav span {
+	width: 33.33%;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s;
+	border-bottom: 2px solid transparent;
+}
+footer nav span:hover {
+	border-bottom: 2px solid var(--textColorDark);
+}
+footer .col {
+	display: flex;
+	gap: 50px;
+	width: 50%;
+	justify-content: center;
+}
+footer img {
+	width: 200px;
+	height: 200px;
+	object-fit: contain;
+	object-position: center;
+}
