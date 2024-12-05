@@ -1,0 +1,76 @@
+body {
+	background-size: cover;
+	background-image: url(./img/1208504.jpg);
+}
+
+.form-wrapp {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	border-radius: 10px;
+	display: flex;
+	border-radius: 10px;
+	padding: 20px;
+	gap: 15px;
+	width: 70vw;
+	background: #0000005d;
+}
+.form-wrapp form {
+	flex: 1 0 60%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: var(--textColorWhite);
+}
+.form-wrapp form h3 {
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 4px;
+}
+/* .form-wrapp__img {
+	border-radius: 10px;
+	flex: 1 0 40%;
+	background-size: cover;
+	background-image: url(./img/загруженное.jpg);
+	background-position: center;
+} */
+.form__inputs {
+	display: flex;
+	gap: 20px;
+}
+.form-wrapp form input {
+	width: 100%;
+	border-radius: 5px;
+	background: white;
+	outline: none;
+	font-size: 20px;
+	padding: 5px 15px;
+}
+.form-wrapp form button {
+	padding: 20px 30px;
+	background: #ffffffbf;
+
+	backdrop-filter: blur(8px);
+	border-radius: 5px;
+	border: none;
+	color: var(--textColorDark);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.form-wrapp .input-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.form-wrapp form button:hover {
+	background: white;
+}

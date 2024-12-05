@@ -1,75 +1,10 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Bebas Neue", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-:root {
-	--headerH: 80px;
-	--textColorDark: black;
-	--textColorWhite: white;
-}
+@import url("./variables.css");
 
-body {
+.main-page {
 	background-size: cover;
 	background-image: url(./img/beautiful-shot-mountains-with-clear-sky-background.jpg);
 }
 
-.container {
-	max-width: 1600px;
-	padding: 0px 30px;
-}
-header {
-	z-index: 5;
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 40px;
-	width: 100vw;
-	height: var(--headerH);
-	background: rgba(193, 193, 193, 0.768);
-	backdrop-filter: blur(8px);
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-header img {
-	height: var(--headerH);
-}
-header span.profile {
-	position: relative;
-	margin-right: 20px;
-}
-header span.profile img {
-	position: absolute;
-	height: 30px;
-	right: -35%;
-	top: -10px;
-}
-header nav {
-	display: flex;
-	gap: 15px;
-}
-header nav span {
-	display: block;
-	font-size: 20px;
-	letter-spacing: 5px;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-top: 2px;
-	border-bottom: 2px solid transparent;
-	padding-bottom: 2px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-header span:hover {
-	padding-bottom: 2px;
-	border-bottom: 2px solid black;
-	color: white;
-}
 /* .bg1 {
 	width: 100%;
 	background-size: cover;
@@ -229,67 +164,159 @@ header span:hover {
 }
 .news__list {
 	padding-top: 40px;
+	padding-bottom: 40px;
 	position: relative;
 	z-index: 1;
 	background: #3333335c;
 	backdrop-filter: blur(3px);
 }
+.news__list .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 .news {
+	height: fit-content;
+	flex: 0 1 400px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	border-radius: 10px;
+}
+.news img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+}
+.news__info {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.news__info h4 {
+	font-size: 25px;
 }
 .news__text {
 }
 .news__button {
+	padding: 10px 20px;
+	background: #00000083;
+	backdrop-filter: blur(8px);
+	border-radius: 5px;
+	border: none;
+	color: var(--textColorWhite);
+	text-transform: uppercase;
+	width: fit-content;
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.news__button:hover {
+	background: #ffffff82;
+	backdrop-filter: blur(8px);
+	color: var(--textColorDark);
+}
+/* ////////////////////////////////////////////////////// */
+/* ///////////////////////booking//////////////////////// */
+/* ////////////////////////////////////////////////////// */
+
+.booking__title {
+	width: 70%;
+	margin: 0 auto;
+	font-size: 60px;
+	color: white;
+	letter-spacing: 6px;
+	text-align: center;
+}
+.booking__first-sec {
+	background-image: url(./img/mount.jpg);
+	background-position: top;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	padding-top: 140px;
+}
+.booking__section {
+	background: #222;
+	backdrop-filter: blur(3px);
+	box-shadow: 0px -10px 10px #222;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.booking__section-title {
+	text-align: center;
+	color: white;
+	font-size: 35px;
+	position: relative;
+	margin-bottom: 40px;
+}
+.booking__section-title span {
+	position: absolute;
+	background: white;
+	width: 30%;
+	height: 2px;
+	bottom: -10px;
+	right: 50%;
+	transform: translateX(50%);
+}
+.booking__list.container {
+	padding: 30px 50px;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	flex-wrap: wrap;
 }
 
-footer {
-	padding: 50px 0px;
-	margin-top: 160px;
-	position: relative;
-	height: 300px;
-	background: white;
-	color: var(--textColorDark);
+.booking__card {
+	height: fit-content;
+	flex: 0 1 400px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	background: #afb3b7;
+	border-radius: 10px;
 }
-footer .circle {
-	left: 50%;
-	top: -20%;
-	transform: translate(-50%);
-	position: absolute;
-	z-index: 5;
-	border-radius: 100%;
-	background: white;
+.booking__card-img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
 }
-footer nav {
+.booking__card-info {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.booking__card-title {
+	font-size: 25px;
+}
+
+.booking__card-desc {
+}
+.booking__card-bt {
+	padding: 10px 20px;
+	background: #00000083;
+	backdrop-filter: blur(8px);
+	border: none;
+	color: var(--textColorWhite);
+	text-transform: uppercase;
+	width: 100%;
+	font-weight: 600;
 	font-size: 20px;
-	display: flex;
-	gap: 200px;
-	justify-content: center;
-}
-footer p {
-	text-align: center;
-	font-size: 40px;
-}
-footer nav span {
-	width: 33.33%;
-	text-align: center;
-	cursor: pointer;
+	letter-spacing: 2px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	transition: 0.3s;
-	border-bottom: 2px solid transparent;
+	cursor: pointer;
 }
-footer nav span:hover {
-	border-bottom: 2px solid var(--textColorDark);
-}
-footer .col {
-	display: flex;
-	gap: 50px;
-	width: 50%;
-	justify-content: center;
-}
-footer img {
-	width: 200px;
-	height: 200px;
-	object-fit: contain;
-	object-position: center;
+.booking__card-bt:hover {
+	background: #ffffff82;
+	backdrop-filter: blur(8px);
+	color: var(--textColorDark);
 }
